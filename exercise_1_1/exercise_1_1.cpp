@@ -3,7 +3,7 @@
 #include <vector>
 
 int main(int argc, char** argv) {
-	std::cout << "Use the wasd keys and enter to input a direction, or the E key to stop" << std::endl;
+	
 
     // Write your code for step 1 here
     std::vector<float> wheel_speeds(4);
