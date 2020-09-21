@@ -37,10 +37,60 @@ int main() {
 
   // TODO write your code here
   // =========== START =========
+  std::string comma;
+  std::cout << "x: {";
+  for (int i = 0; i < x.size(); i++) {
+    if (i < x.size() - 1) {
+      comma = ",";
+    } else {
+      comma = "";
+    }
+    std::cout << x[i] << comma;
+  }
+  std::cout << "}" << std::endl;
 
+  std::cout << "w: {";
+  for (int i = 0; i < w.size(); i++) {
+    if (i < w.size() - 1) {
+      comma = ",";
+    } else {
+      comma = "";
+    }
+    std::cout << w[i] << comma;
+  }
+  std::cout << "}" << std::endl;
 
+  //
+  int sum;
+  int vec;
 
+  for (int k = -1; k < (int)(x.size() - 1); k++) {
+    sum = 0;
+    for (int i = 0, j = k; i < w.size(); i++, j++) {
+      if (pack_with_zeros && j == -1 && j > x.size() - 1) {
+        vec = 0;
+      } else if (j == -1) {
+        vec = x[j+1];
+      } else if (j > x.size() - 1){
+        vec = x[j-1];
+      } else {
+        vec = x[j];
+      }
+      sum += vec * w[i];
+    }
+    y.push_back(sum);
+  }
 
+  std::cout << "y: {";
+  for (int i = 0; i < y.size(); i++) {
+    if (i < y.size() - 1) {
+      comma = ",";
+    } else {
+      comma = "";
+    }
+    std::cout << y[i] << comma;
+  }
+  std::cout << "}" << std::endl;
   // =========== END ===========
 
   return 0;
