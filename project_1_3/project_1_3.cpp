@@ -41,7 +41,7 @@ int main() {
   std::cout << "x: {";
   for (int i = 0; i < x.size(); i++) {
     if (i < x.size() - 1) {
-      comma = ",";
+      comma = ", ";
     } else {
       comma = "";
     }
@@ -52,7 +52,7 @@ int main() {
   std::cout << "w: {";
   for (int i = 0; i < w.size(); i++) {
     if (i < w.size() - 1) {
-      comma = ",";
+      comma = ", ";
     } else {
       comma = "";
     }
@@ -60,7 +60,6 @@ int main() {
   }
   std::cout << "}" << std::endl;
 
-  //
   int sum;
   int vec;
 
@@ -81,10 +80,10 @@ int main() {
     y.push_back(sum);
   }
 
-  std::cout << "y: {";
+  std::cout << "{";
   for (int i = 0; i < y.size(); i++) {
     if (i < y.size() - 1) {
-      comma = ",";
+      comma = ", ";
     } else {
       comma = "";
     }
