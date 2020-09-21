@@ -66,7 +66,7 @@ int main() {
   for (int k = -1; k < (int)(x.size() - 1); k++) {
     sum = 0;
     for (int i = 0, j = k; i < w.size(); i++, j++) {
-      if (pack_with_zeros && j == -1 && j > x.size() - 1) {
+      if (pack_with_zeros && (j == -1 || j > x.size() - 1)) {
         vec = 0;
       } else if (j == -1) {
         vec = x[j+1];
